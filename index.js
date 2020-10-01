@@ -3,7 +3,7 @@ const app = express();
 const compression = require("compression");
 const bodyParser = require("body-parser");
 const { sendEmail } = require("./ses.js");
-const email = `giacomo@rapposelli.org`;
+const email = `rapposelli.giacomo@gmail.com`;
 const port = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + "/public"));
