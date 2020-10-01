@@ -620,6 +620,10 @@ hr {
         overflow-x: hidden;
     }
 
+    #projects {
+        height: auto;
+    }
+
     .summary {
         font-size: 0.8rem;
         margin-left: 5%;
