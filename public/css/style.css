@@ -196,7 +196,7 @@ h2 {
 
 #projects {
     margin-top: 100px;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -588,6 +588,20 @@ hr {
 @media only screen and (max-width: 1214px) and (min-width: 1000px) {
     .work {
         padding: 20px 12%;
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .work-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 40px;
     }
 }
 
