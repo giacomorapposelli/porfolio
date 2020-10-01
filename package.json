@@ -1,27 +1,27 @@
 {
-  "name": "devfolio-2",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "aws-sdk": "^2.763.0",
-    "body-parser": "^1.19.0",
-    "compression": "^1.7.4",
-    "csurf": "^1.11.0",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/giacomorapposelli/porfolio.git"
-  },
-  "bugs": {
-    "url": "https://github.com/giacomorapposelli/porfolio/issues"
-  },
-  "homepage": "https://github.com/giacomorapposelli/porfolio#readme",
-  "description": ""
+    "name": "devfolio-2",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "aws-sdk": "^2.763.0",
+        "body-parser": "^1.19.0",
+        "compression": "^1.7.4",
+        "csurf": "^1.11.0",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/giacomorapposelli/porfolio.git"
+    },
+    "bugs": {
+        "url": "https://github.com/giacomorapposelli/porfolio/issues"
+    },
+    "homepage": "https://github.com/giacomorapposelli/porfolio#readme",
+    "description": ""
 }

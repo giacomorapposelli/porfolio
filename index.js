@@ -30,6 +30,6 @@ app.post("/contact", (req, res) => {
     );
 });
 
-app.listen(process.env.PORT || 8080, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("I'm listening.");
 });
