@@ -1,0 +1,21 @@
+{
+  "name": "DevFolio",
+  "version": "1.0.0",
+  "description": "This is a simple responsive portfolio website template . You can use it and make it yours by changing things and colors to your style and liking! I made it with a lot of hard work, love and of course with code :) I'm not a professional coder, but i tried my best to make it look cool and yet still keep it simple.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"No build specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achaljhawar/DevFolio.git"
+  },
+  "keywords": [],
+  "author": "Achal Jhawar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/achaljhawar/DevFolio/issues"
+  },
+  "homepage": "https://github.com/achaljhawar/DevFolio#readme"
+}
