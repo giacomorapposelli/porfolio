@@ -4,6 +4,7 @@ const compression = require("compression");
 const bodyParser = require("body-parser");
 const { sendEmail } = require("./ses.js");
 const email = `rapposelli.giacomo@gmail.com`;
+const port = process.env.PORT || 8000;
 
 app.use(express.static(__dirname + "/public"));
 app.use(compression());
@@ -30,6 +31,6 @@ app.post("/contact", (req, res) => {
     );
 });
 
-app.listen(process.env.PORT || 3000, function () {
-    console.log("I'm listening.");
+app.listen(port, () => {
+    console.log("App is running on port " + port);
 });
