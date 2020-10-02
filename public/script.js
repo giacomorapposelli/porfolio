@@ -138,3 +138,43 @@ sr.reveal(".contact__input", { interval: 200 });
 sr.reveal(".button", { delay: 200 });
 
 window.onload = () => navSlide();
+
+const checkScrollSpeed = (function (settings) {
+    settings = settings || {};
+
+    let lastPos,
+        newPos,
+        timer,
+        delta,
+        delay = settings.delay || 50;
+
+    function clear() {
+        lastPos = null;
+        delta = 0;
+    }
+
+    clear();
+
+    return function () {
+        newPos = window.scrollY;
+        if (lastPos != null) {
+            delta = newPos - lastPos;
+        }
+        lastPos = newPos;
+        clearTimeout(timer);
+        timer = setTimeout(clear, delay);
+        return delta;
+    };
+})();
+
+window.addEventListener("scroll", function () {
+    let speed = checkScrollSpeed();
+    if (speed > 100) {
+        sr.reveal(".card", { interval: 30 });
+        sr.reveal(".portfolio", { delay: 20 });
+        sr.reveal(".mainbar", { delay: 40 });
+        sr.reveal(".mainlogo", { interval: 20 });
+        sr.reveal(".contact__input", { interval: 20 });
+        sr.reveal(".button", { delay: 20 });
+    }
+});
