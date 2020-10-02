@@ -170,11 +170,11 @@ const checkScrollSpeed = (function (settings) {
 window.addEventListener("scroll", function () {
     let speed = checkScrollSpeed();
     if (speed > 100) {
-        sr.reveal(".card", { interval: 30 });
-        sr.reveal(".portfolio", { delay: 20 });
-        sr.reveal(".mainbar", { delay: 40 });
-        sr.reveal(".mainlogo", { interval: 20 });
-        sr.reveal(".contact__input", { interval: 20 });
-        sr.reveal(".button", { delay: 20 });
+        sr.reveal(".card", { duration: 0 });
+        sr.reveal(".portfolio", { duration: 0 });
+        sr.reveal(".mainbar", { duration: 0 });
+        sr.reveal(".mainlogo", { duration: 0 });
+        sr.reveal(".contact__input", { duration: 0 });
+        sr.reveal(".button", { duration: 0 });
     }
 });
