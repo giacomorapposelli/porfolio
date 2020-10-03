@@ -29,7 +29,7 @@ app.post("/contact", (req, res) => {
         req.body.subject,
         `From: ${req.body.name}     ${req.body.email} Text: ${req.body.text}`
     )
-        .then(() => res.status(200))
+        .then(() => res.status(204).send())
         .catch((err) => console.log(err));
 });
 
