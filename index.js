@@ -28,7 +28,9 @@ app.post("/contact", (req, res) => {
         email,
         req.body.subject,
         `From: ${req.body.name}     ${req.body.email} Text: ${req.body.text}`
-    ).catch((err) => console.log(err));
+    )
+        .then(() => res.status(200))
+        .catch((err) => console.log(err));
 });
 
 app.listen(port, () => {

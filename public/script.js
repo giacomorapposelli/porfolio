@@ -119,6 +119,8 @@ button.addEventListener("click", () => {
             message.style.visibility = "visible";
             setTimeout(() => (message.style.visibility = "hidden"), 3000);
         }
+        input.value = "";
+        text.value = "";
     }
 });
 
