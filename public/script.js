@@ -119,8 +119,10 @@ button.addEventListener("click", () => {
             message.style.visibility = "visible";
             setTimeout(() => (message.style.visibility = "hidden"), 3000);
         }
-        input.value = "";
-        text.value = "";
+        setTimeout(() => {
+            input.value = "";
+            text.value = "";
+        }, 100);
     }
 });
 
@@ -171,11 +173,11 @@ const checkScrollSpeed = (function (settings) {
 window.addEventListener("scroll", function () {
     let speed = checkScrollSpeed();
     if (speed > 60) {
-        sr.reveal(".card", { interval: 60 }, { duration: 0 });
-        sr.reveal(".portfolio", { delay: 40 }, { duration: 0 });
-        sr.reveal(".mainbar", { delay: 80 }, { duration: 0 });
-        sr.reveal(".mainlogo", { interval: 40 }, { duration: 0 });
-        sr.reveal(".contact__input", { interval: 40 }, { duration: 0 });
-        sr.reveal(".button", { interval: 40 }, { duration: 0 });
+        sr.reveal(".card", { interval: 0 }, { duration: 0 });
+        sr.reveal(".portfolio", { delay: 0 }, { duration: 0 });
+        sr.reveal(".mainbar", { delay: 0 }, { duration: 0 });
+        sr.reveal(".mainlogo", { interval: 0 }, { duration: 0 });
+        sr.reveal(".contact__input", { interval: 0 }, { duration: 0 });
+        sr.reveal(".button", { interval: 0 }, { duration: 0 });
     }
 });
