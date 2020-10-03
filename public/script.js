@@ -125,7 +125,7 @@ button.addEventListener("click", () => {
 const sr = ScrollReveal({
     origin: "top",
     distance: "80px",
-    duration: 2000,
+    duration: 1600,
     reset: true,
 });
 
@@ -141,21 +141,20 @@ window.onload = () => navSlide();
 
 const checkScrollSpeed = (function (settings) {
     settings = settings || {};
-
     let lastPos,
         newPos,
         timer,
         delta,
         delay = settings.delay || 50;
 
-    function clear() {
+    const clear = () => {
         lastPos = null;
         delta = 0;
-    }
+    };
 
     clear();
 
-    return function () {
+    return () => {
         newPos = window.scrollY;
         if (lastPos != null) {
             delta = newPos - lastPos;
@@ -169,12 +168,12 @@ const checkScrollSpeed = (function (settings) {
 
 window.addEventListener("scroll", function () {
     let speed = checkScrollSpeed();
-    if (speed > 100) {
-        sr.reveal(".card", { duration: 0 });
-        sr.reveal(".portfolio", { duration: 0 });
-        sr.reveal(".mainbar", { duration: 0 });
-        sr.reveal(".mainlogo", { duration: 0 });
-        sr.reveal(".contact__input", { duration: 0 });
-        sr.reveal(".button", { duration: 0 });
+    if (speed > 60) {
+        sr.reveal(".card", { interval: 60 }, { duration: 0 });
+        sr.reveal(".portfolio", { delay: 40 }, { duration: 0 });
+        sr.reveal(".mainbar", { delay: 80 }, { duration: 0 });
+        sr.reveal(".mainlogo", { interval: 40 }, { duration: 0 });
+        sr.reveal(".contact__input", { interval: 40 }, { duration: 0 });
+        sr.reveal(".button", { interval: 40 }, { duration: 0 });
     }
 });
