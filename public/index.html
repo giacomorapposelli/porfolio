@@ -4,20 +4,20 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>Giacomo Rapposelli</title>
-		<link href="/css/style.css" rel="stylesheet" type="text/css" />
-		<link href="/css/background.css" rel="stylesheet" type="text/css" />
+        <link href="/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="/css/background.css" rel="stylesheet" type="text/css" />
         <link
             defer
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
         />
-		<script src="https://unpkg.com/scrollreveal"></script>
-		<script defer src="script.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script defer src="script.js"></script>
     </head>
     <body>
-		<div class="overlay"></div>
-		<div class="close-modal"><i class="far fa-times-circle"></i></div>
-		</div>
+        <div class="overlay"></div>
+        <div class="close-modal"><i class="far fa-times-circle"></i></div>
         <div class="container">
             <header>
                 <a class="logo" href="#home"> </a>
@@ -25,12 +25,12 @@
                     <ul class="nav-bar">
                         <div class="bg"></div>
                         <li>
-                            <a class="nav-link" >About Me</a>
+                            <a class="nav-link">About Me</a>
                         </li>
                         <li>
-                            <a class="nav-link" >Projects</a>
+                            <a class="nav-link">Projects</a>
                         </li>
-                        <li><a class="nav-link" >Contact</a></li>
+                        <li><a class="nav-link">Contact</a></li>
                     </ul>
                     <div class="hamburger">
                         <div class="line1"></div>
@@ -41,30 +41,36 @@
             </header>
             <main>
                 <div id="home" class="section">
-					<div class="page-bg"></div>
-						<div class="animation-wrapper">
-						  	<div class="particle particle-1"></div>
-							<div class="particle particle-2"></div>					
-					</div>
-					<section class="intro">
-					  <h1 class="name main title">
-						  Giacomo Rapposelli
-						  <hr class="mainbar"/>
-					  </h1>
-					  <h3 class="headline portfolio">Personal Portfolio</h3>
-					  <div class="social-media">
-						  <a href="/images/CV-Giacomo-Rapposelli-97033.pdf" target="_blank"
-							  ><i class="fas fa-file mainlogo"></i></i
-						  ></a>
-						  <a href="https://github.com/giacomorapposelli" target="_blank"
-							  ><i class="fab fa-github mainlogo"></i
-						  ></a>
-						  <a href="https://www.linkedin.com/in/giacomo-rapposelli-a5349214b/" target="_blank"
-							  ><i class="fab fa-linkedin-in mainlogo"></i
-						  ></a>
-					  </div>
-				    </section>                    
-				</div>				
+                    <div class="page-bg"></div>
+                    <div class="animation-wrapper">
+                        <div class="particle particle-1"></div>
+                        <div class="particle particle-2"></div>
+                    </div>
+                    <section class="intro">
+                        <h1 class="name main title">
+                            Giacomo Rapposelli
+                            <hr class="mainbar" />
+                        </h1>
+                        <h3 class="headline portfolio">Personal Portfolio</h3>
+                        <div class="social-media">
+                            <a
+                                href="/images/CV-Giacomo-Rapposelli-97033.pdf"
+                                target="_blank"
+                                ><i class="fas fa-file mainlogo"></i
+                            ></a>
+                            <a
+                                href="https://github.com/giacomorapposelli"
+                                target="_blank"
+                                ><i class="fab fa-github mainlogo"></i
+                            ></a>
+                            <a
+                                href="https://www.linkedin.com/in/giacomo-rapposelli-a5349214b/"
+                                target="_blank"
+                                ><i class="fab fa-linkedin-in mainlogo"></i
+                            ></a>
+                        </div>
+                    </section>
+                </div>
                 <div id="about">
                     <section class="about">
                         <h3 class="headline">About Me</h3>
@@ -75,10 +81,13 @@
                         </p>
                         <br />
                         <p class="summary">
-                            I love to code in Javascript as enjoy solving complex problems, both on the frontend and backend.<br> 
-							I started as freelance and then I graduated at Spiced Academy,where I strengthened my knowledge and practice on React.js, Vue.js, JQuery, Node and Express.
-							
-							 
+                            I love to code in Javascript as enjoy solving
+                            complex problems, both on the frontend and
+                            backend.<br />
+                            I started as freelance and then I graduated at
+                            Spiced Academy,where I strengthened my knowledge and
+                            practice on React.js, Vue.js, JQuery, Node and
+                            Express.
                         </p>
                     </section>
                 </div>
@@ -91,39 +100,50 @@
                         <div class="work">
                             <div class="card" id="card1">
                                 <img class="work-img" src="/images/logo.jpg" />
-                                    <div class="work-content">
-                                        SpeedKobra Official Website
-                                    </div>
+                                <div class="work-content">
+                                    SpeedKobra Official Website
+                                </div>
                             </div>
                             <div class="card" id="card2">
-                                <img class="work-img" src="/images/painted.png" />
-                                    <div class="work-content">
-                                        Painted Ubahn
-                                    </div>
+                                <img
+                                    class="work-img"
+                                    src="/images/painted.png"
+                                />
+                                <div class="work-content">Painted Ubahn</div>
                             </div>
                             <div class="card" id="card3">
-                                <img class="work-img" src="/images/palmbook.png" />
-                                
-                                    <div class="work-content">Palmbook</div>
+                                <img
+                                    class="work-img"
+                                    src="/images/palmbook.png"
+                                />
+
+                                <div class="work-content">Palmbook</div>
                             </div>
                             <div class="card" id="card4">
-                                <img class="work-img" src="/images/petition.png" />
-                         
-                                    <div class="work-content">Petition</div>
+                                <img
+                                    class="work-img"
+                                    src="/images/petition.png"
+                                />
+
+                                <div class="work-content">Petition</div>
                             </div>
                             <div class="card" id="card5">
-                                <img class="work-img" src="/images/forza4.png" />
-                  
-                                    <div class="work-content">
-                                        Connect Four Game
-                                    </div>
+                                <img
+                                    class="work-img"
+                                    src="/images/forza4.png"
+                                />
+
+                                <div class="work-content">
+                                    Connect Four Game
+                                </div>
                             </div>
                             <div class="card" id="card6">
-                                <img class="work-img" src="/images/spotify.png" />
-                          
-                                    <div class="work-content">
-                                        Spotify API
-                                    </div>
+                                <img
+                                    class="work-img"
+                                    src="/images/spotify.png"
+                                />
+
+                                <div class="work-content">Spotify API</div>
                             </div>
                         </div>
                     </div>
@@ -135,215 +155,312 @@
                     </h2>
                     <p>Feel free to contact me here.</p>
                     <div class="contact__container bd-grid">
-						<form method="POST" action="/contact" class="contact__form">
-							<input type="text" name="name" placeholder="Name" class="contact__input" required />
-							<input type="email" name="email" placeholder="Email" class="contact__input" required />
-							<input type="text" name="subject" placeholder="Subject" class="contact__input" required />
-							<textarea name="text" id="" cols="0" rows="9" class="contact__input" required ></textarea>
-							<button class="nav-link button">Submit</button>
-						</form>
-						<p class="confirm">Your message has been sent,thank you!</p>
-					</div>
-				</div>
-				<div class="modals">
-					<i class="fas fa-angle-left prev-btn"></i>
-					<i class="fas fa-angle-right next-btn"></i>					
-					<div class="modal-slider">
-						<div id="project-0-modal" class="modal" >							
-							<h1>
-								SpeedKobra Website
-								<hr />
-							</h1>
-							<img src="/images/speedkobra.png" alt="" class="modal-img" />
-							<p class="description">
-								A single-page website for the band "SpeedKobra".
-								Includes image sliders and a small marketplace where the
-								user can buy merchandise.
-							</p>		
-							<div class="tags">
-								<span class="tag">react</span>
-								<span class="tag">node</span>
-								<span class="tag">express</span>
-								<span class="tag">psql</span>
-								<span class="tag">css</span>
-							</div>
-							<hr class="modal-br" />
-							<ul class="modal-nav">
-								<li>
-									<a class="nav-link" href="https://github.com/giacomorapposelli/speedKobra" target="_blank"
-										>GitHub<i class="fab fa-github open"></i
-									></a>
-								</li>
-								<li>
-									<a class="nav-link" href="http://www.speedkobra.com/" target="_blank"
-										>Open<i
-											class="fas fa-external-link-alt open"
-										></i
-									></a>
-								</li>
-							</ul>
-						</div>
-						<div id="project-1-modal" class="modal">
-							<h1>
-								Painted Ubahn
-								<hr />
-							</h1>
-							<img src="/images/painted.png" alt="" class="modal-img" />
-							<p class="description">
-								Single page application build with Vue.js. An Instagram
-								clone basically focused on graffiti,tags,art etc. on
-								Berlin's metro trains.
-							</p>		
-							<div class="tags">
-								<span class="tag">vue</span>
-								<span class="tag">node</span>
-								<span class="tag">express</span>
-								<span class="tag">psql</span>
-								<span class="tag">css</span>
-							</div>
-							<hr class="modal-br" />
-							<ul class="modal-nav">
-								<li>
-									<a class="nav-link" href="https://github.com/giacomorapposelli/image-board" target="_blank"
-										>GitHub<i class="fab fa-github open"></i
-									></a>
-								</li>
-								<li>
-									<a class="nav-link" href="https://paintedubahn.herokuapp.com/" target="_blank"
-										>Open<i
-											class="fas fa-external-link-alt open"
-										></i
-									></a>
-								</li>
-							</ul>
-						</div>
-						<div id="project-2-modal" class="modal">							
-							<h1>
-								Palmbook
-								<hr />
-							</h1>
-							<img src="/images/palmmodal.png" alt="" class="modal-img" />
-							<p class="description">
-								A FB clone social network where the user can create an account,upload pictures,make friends request and chat!
-							</p>	
-							<div class="tags">
-								<span class="tag">react</span>
-								<span class="tag">node</span>
-								<span class="tag">express</span>
-								<span class="tag">psql</span>
-								<span class="tag">css</span>
-							</div>
-							<hr class="modal-br" />
-							<ul class="modal-nav">
-								<li>
-									<a class="nav-link" href="https://github.com/giacomorapposelli/social-network" target="_blank"
-										>GitHub<i class="fab fa-github open"></i
-									></a>
-								</li>								
-							</ul>
-						</div>
-						<div id="project-3-modal" class="modal">				
-							<h1>
-								Petition
-								<hr />
-							</h1>
-							<img src="/images/petition.png" alt="" class="modal-img" />
-							<p class="description">
-								Petiton to abolish the TV/RADIO tax in Berlin! A website where the user can log in and virtually sign a petition for a right cause!	
-							</p>		
-							<div class="tags">
-								<span class="tag">javascript</span>
-								<span class="tag">node</span>
-								<span class="tag">express</span>
-								<!-- <span class="tag">handlebars</span> -->
-								<span class="tag">psql</span>
-								<!-- <span class="tag">css</span> -->
-							</div>
-							<hr class="modal-br" />
-							<ul class="modal-nav">
-								<li>
-									<a class="nav-link" href="https://github.com/giacomorapposelli/petition" target="_blank"
-										>GitHub<i class="fab fa-github open"></i
-									></a>
-								</li>
-								<li>
-									<a class="nav-link" href="https://el-rappo.herokuapp.com" target="_blank"
-										>Open<i
-											class="fas fa-external-link-alt open"
-										></i
-									></a>
-								</li>
-							</ul>
-						</div>
-						<div id="project-4-modal" class="modal">					
-							<h1>
-								Connect Four
-								<hr />
-							</h1>
-							<img src="/images/forzamodal.png" alt="" class="modal-img" />
-							<p class="description">
-								Classic Connect 4 game built with HTML CSS and Jquery!
-							</p>		
-							<div class="tags">
-								<span class="tag">html</span>
-								<span class="tag">css</span>
-								<span class="tag">javascript</span>
-								<span class="tag">jquery</span>
-							</div>
-							<hr class="modal-br" />
-							<ul class="modal-nav">
-								<li>
-									<a class="nav-link" href="https://github.com/giacomorapposelli/connect-four-game" target="_blank"
-										>GitHub<i class="fab fa-github open"></i
-									></a>
-								</li>
-								<li>
-									<a class="nav-link" href="https://forzaquattro.herokuapp.com" target="_blank"
-										>Open<i
-											class="fas fa-external-link-alt open"
-										></i
-									></a>
-								</li>
-							</ul>
-						</div>
-						<div id="project-5-modal" class="modal" >		
-							<h1>
-								Spotify Search
-								<hr />
-							</h1>
-							<img src="/images/spotify.png" alt="" class="modal-img" />
-							<p class="description">
-								An interface that allows users to search their favorite artists and albums by making AJAX calls to Spotify's API via a proxy.
-							</p>		
-							<div class="tags">
-								<span class="tag">html</span>
-								<span class="tag">css</span>
-								<span class="tag">javascript</span>
-								<span class="tag">jquery</span>
-							</div>
-							<hr class="modal-br" />
-							<ul class="modal-nav">
-								<li>
-									<a class="nav-link" href="https://github.com/giacomorapposelli/spotify-api" target="_blank"
-										>GitHub<i class="fab fa-github open"></i
-									></a>
-								</li>
-								<li>
-									<a class="nav-link" href="http://spotify-apisearch.herokuapp.com/" target="_blank"
-										>Open<i
-											class="fas fa-external-link-alt open"
-										></i
-									></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+                        <form
+                            method="POST"
+                            action="/contact"
+                            class="contact__form"
+                        >
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Name"
+                                class="contact__input"
+                                id="name"
+                                required
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                class="contact__input"
+                                id="email"
+                                required
+                            />
+                            <input
+                                type="text"
+                                name="subject"
+                                placeholder="Subject"
+                                class="contact__input"
+                                id="subject"
+                                required
+                            />
+                            <textarea
+                                name="text"
+                                id="text"
+                                cols="0"
+                                rows="9"
+                                class="contact__input"
+                                required
+                                maxlength="500"
+                            ></textarea>
+                            <button class="nav-link button">Submit</button>
+                        </form>
+                        <p class="confirm">
+                            Your message has been sent,thank you!
+                        </p>
+                    </div>
+                </div>
+                <div class="modals">
+                    <i class="fas fa-angle-left prev-btn"></i>
+                    <i class="fas fa-angle-right next-btn"></i>
+                    <div class="modal-slider">
+                        <div id="project-0-modal" class="modal">
+                            <h1>
+                                SpeedKobra Website
+                                <hr />
+                            </h1>
+                            <img
+                                src="/images/speedkobra.png"
+                                alt=""
+                                class="modal-img"
+                            />
+                            <p class="description">
+                                A single-page website for the band "SpeedKobra".
+                                Includes image sliders and a small marketplace
+                                where the user can buy merchandise.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">react</span>
+                                <span class="tag">node</span>
+                                <span class="tag">express</span>
+                                <span class="tag">psql</span>
+                                <span class="tag">css</span>
+                            </div>
+                            <hr class="modal-br" />
+                            <ul class="modal-nav">
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="https://github.com/giacomorapposelli/speedKobra"
+                                        target="_blank"
+                                        >GitHub<i class="fab fa-github open"></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="http://www.speedkobra.com/"
+                                        target="_blank"
+                                        >Open<i
+                                            class="fas fa-external-link-alt open"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="project-1-modal" class="modal">
+                            <h1>
+                                Painted Ubahn
+                                <hr />
+                            </h1>
+                            <img
+                                src="/images/painted.png"
+                                alt=""
+                                class="modal-img"
+                            />
+                            <p class="description">
+                                Single page application build with Vue.js. An
+                                Instagram clone basically focused on
+                                graffiti,tags,art etc. on Berlin's metro trains.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">vue</span>
+                                <span class="tag">node</span>
+                                <span class="tag">express</span>
+                                <span class="tag">psql</span>
+                                <span class="tag">css</span>
+                            </div>
+                            <hr class="modal-br" />
+                            <ul class="modal-nav">
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="https://github.com/giacomorapposelli/image-board"
+                                        target="_blank"
+                                        >GitHub<i class="fab fa-github open"></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="https://paintedubahn.herokuapp.com/"
+                                        target="_blank"
+                                        >Open<i
+                                            class="fas fa-external-link-alt open"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="project-2-modal" class="modal">
+                            <h1>
+                                Palmbook
+                                <hr />
+                            </h1>
+                            <img
+                                src="/images/palmmodal.png"
+                                alt=""
+                                class="modal-img"
+                            />
+                            <p class="description">
+                                A FB clone social network where the user can
+                                create an account,upload pictures,make friends
+                                request and chat!
+                            </p>
+                            <div class="tags">
+                                <span class="tag">react</span>
+                                <span class="tag">node</span>
+                                <span class="tag">express</span>
+                                <span class="tag">psql</span>
+                                <span class="tag">css</span>
+                            </div>
+                            <hr class="modal-br" />
+                            <ul class="modal-nav">
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="https://github.com/giacomorapposelli/social-network"
+                                        target="_blank"
+                                        >GitHub<i class="fab fa-github open"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="project-3-modal" class="modal">
+                            <h1>
+                                Petition
+                                <hr />
+                            </h1>
+                            <img
+                                src="/images/petition.png"
+                                alt=""
+                                class="modal-img"
+                            />
+                            <p class="description">
+                                Petiton to abolish the TV/RADIO tax in Berlin! A
+                                website where the user can log in and virtually
+                                sign a petition for a right cause!
+                            </p>
+                            <div class="tags">
+                                <span class="tag">javascript</span>
+                                <span class="tag">node</span>
+                                <span class="tag">express</span>
+                                <!-- <span class="tag">handlebars</span> -->
+                                <span class="tag">psql</span>
+                                <!-- <span class="tag">css</span> -->
+                            </div>
+                            <hr class="modal-br" />
+                            <ul class="modal-nav">
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="https://github.com/giacomorapposelli/petition"
+                                        target="_blank"
+                                        >GitHub<i class="fab fa-github open"></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="https://el-rappo.herokuapp.com"
+                                        target="_blank"
+                                        >Open<i
+                                            class="fas fa-external-link-alt open"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="project-4-modal" class="modal">
+                            <h1>
+                                Connect Four
+                                <hr />
+                            </h1>
+                            <img
+                                src="/images/forzamodal.png"
+                                alt=""
+                                class="modal-img"
+                            />
+                            <p class="description">
+                                Classic Connect 4 game built with HTML CSS and
+                                Jquery!
+                            </p>
+                            <div class="tags">
+                                <span class="tag">html</span>
+                                <span class="tag">css</span>
+                                <span class="tag">javascript</span>
+                                <span class="tag">jquery</span>
+                            </div>
+                            <hr class="modal-br" />
+                            <ul class="modal-nav">
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="https://github.com/giacomorapposelli/connect-four-game"
+                                        target="_blank"
+                                        >GitHub<i class="fab fa-github open"></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="https://forzaquattro.herokuapp.com"
+                                        target="_blank"
+                                        >Open<i
+                                            class="fas fa-external-link-alt open"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="project-5-modal" class="modal">
+                            <h1>
+                                Spotify Search
+                                <hr />
+                            </h1>
+                            <img
+                                src="/images/spotify.png"
+                                alt=""
+                                class="modal-img"
+                            />
+                            <p class="description">
+                                An interface that allows users to search their
+                                favorite artists and albums by making AJAX calls
+                                to Spotify's API via a proxy.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">html</span>
+                                <span class="tag">css</span>
+                                <span class="tag">javascript</span>
+                                <span class="tag">jquery</span>
+                            </div>
+                            <hr class="modal-br" />
+                            <ul class="modal-nav">
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="https://github.com/giacomorapposelli/spotify-api"
+                                        target="_blank"
+                                        >GitHub<i class="fab fa-github open"></i
+                                    ></a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="nav-link"
+                                        href="http://spotify-apisearch.herokuapp.com/"
+                                        target="_blank"
+                                        >Open<i
+                                            class="fas fa-external-link-alt open"
+                                        ></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </main>
             <footer class="copyright">
-                <a href="https://github.com/achaljhawar" target="_blank"
-                    >© 2020 Giacomo Rapposelli</a
-                >
+                <a target="_blank">© 2020 Giacomo Rapposelli</a>
             </footer>
         </div>
     </body>

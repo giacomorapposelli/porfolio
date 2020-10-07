@@ -362,6 +362,14 @@ input:-webkit-autofill:active {
     visibility: hidden;
 }
 
+.msg {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /*────────────────── 
        footer
 ──────────────────*/
@@ -758,6 +766,9 @@ hr {
     }
     .work-box {
         margin-top: 10px;
+    }
+    .msg {
+        width: 100px;
     }
 }
 

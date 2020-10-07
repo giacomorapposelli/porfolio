@@ -117,7 +117,7 @@ button.addEventListener("click", () => {
     for (let input of inputs) {
         if (input.value != "" && text.value != "") {
             message.style.visibility = "visible";
-            setTimeout(() => (message.style.visibility = "hidden"), 3000);
+            setTimeout(() => (message.style.visibility = "hidden"), 4000);
         }
         setTimeout(() => {
             input.value = "";
