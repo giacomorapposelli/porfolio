@@ -16,11 +16,7 @@ const button = document.querySelector("button");
 const message = document.querySelector(".confirm");
 let counter = 0;
 
-window.addEventListener("scroll", function () {
-    window.pageYOffset
-        ? header.classList.add("nav-show")
-        : header.classList.remove("nav-show");
-});
+home.addEventListener("mouseover", () => (header.style.visibility = "visible"));
 
 navLinks.forEach((link, index) => {
     link.addEventListener(
