@@ -9,14 +9,14 @@ const slider = document.querySelector(".modal-slider");
 const projects = document.querySelectorAll(".modal");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
+const work = document.querySelectorAll(".work-content");
+const images = document.querySelectorAll(".card img");
 const size = projects[0].clientWidth;
 const inputs = document.getElementsByTagName("input");
 const text = document.querySelector("textarea");
 const button = document.querySelector("button");
 const message = document.querySelector(".confirm");
 let counter = 0;
-
-home.addEventListener("mouseover", () => (header.style.visibility = "visible"));
 
 navLinks.forEach((link, index) => {
     link.addEventListener(
