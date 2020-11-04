@@ -17,6 +17,8 @@ const text = document.querySelector("textarea");
 const button = document.querySelector("button");
 const message = document.querySelector(".confirm");
 let counter = 0;
+const summary = document.querySelectorAll(".summary")[0].innerText
+
 
 navLinks.forEach((link, index) => {
     link.addEventListener(
@@ -124,16 +126,19 @@ button.addEventListener("click", () => {
 
 const sr = ScrollReveal({
     origin: "top",
-    distance: "80px",
-    duration: 1600,
+    distance: "100px",
+    duration: 1800,
     reset: true,
 });
 
-sr.reveal(".card", { interval: 300 });
+
+
+sr.reveal(".card", { interval: 400 });
 sr.reveal(".name", {});
-sr.reveal(".portfolio", { delay: 200 });
-sr.reveal(".mainbar", { delay: 400 });
-sr.reveal(".mainlogo", { interval: 200 });
+sr.reveal(".mainbar", { delay: 600 });
+sr.reveal(".mainlogo", { delay: 1000,interval: 400 });
+sr.reveal(".headline", { interval: 400, delay: 200 });
+sr.reveal(".summary", { interval: 200,delay: 200 });
 sr.reveal(".contact__input", { interval: 200 });
 sr.reveal(".button", { delay: 200 });
 
@@ -177,3 +182,5 @@ window.addEventListener("scroll", function () {
         sr.reveal(".button", { interval: 0 }, { duration: 0 });
     }
 });
+
+

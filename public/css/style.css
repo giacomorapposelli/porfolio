@@ -230,6 +230,7 @@ h2 {
     border-radius: 5px;
     background: #47bae03f;
     transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    z-index: 0;
 }
 
 .card img {
@@ -240,6 +241,7 @@ h2 {
     opacity: 0.7;
     cursor: pointer;
     transition: opacity 0.4s ease-in-out;
+    z-index: 1;
 }
 
 .card img:hover {
@@ -492,6 +494,7 @@ hr {
     position: fixed;
     z-index: 6;
     visibility: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
 .close-modal:hover {
@@ -549,6 +552,7 @@ hr {
     color: white;
     z-index: 5;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .next-btn {
@@ -559,15 +563,12 @@ hr {
     color: white;
     z-index: 5;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .prev-btn:hover,
 .next-btn:hover {
-    transform: scale(2.5);
-}
-
-.xmodal:hover {
-    transform: scale(1.2);
+    transform: scale(3);
 }
 
 .modal-slider {
