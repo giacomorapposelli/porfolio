@@ -1,6 +1,6 @@
 $color-bg: #1e1e1e;
-$color-particle: rgba(226, 226, 226, 0.582);
-$spacing: 1400px;
+$color-particle: rgba(226, 226, 226, 0.534);
+$spacing: 2000px;
 $time-1: 50s;
 $time-2: 100s;
 $time-3: 160s;
@@ -31,7 +31,6 @@ $time-3: 160s;
 
 .page-bg {
     background: $color-bg;
-
     background-size: cover;
     filter: grayscale(100%);
     z-index: -1;
