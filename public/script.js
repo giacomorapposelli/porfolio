@@ -137,8 +137,7 @@ sr.reveal(".card", { interval: 400 });
 sr.reveal(".name", {});
 sr.reveal(".mainbar", { delay: 600 });
 sr.reveal(".mainlogo", { delay: 1000,interval: 400 });
-sr.reveal(".headline", { interval: 400, delay: 200 });
-sr.reveal(".summary", { interval: 200,delay: 200 });
+sr.reveal(".portfolio", { interval: 400, delay: 200 });
 sr.reveal(".contact__input", { interval: 200 });
 sr.reveal(".button", { delay: 200 });
 

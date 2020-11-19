@@ -1,7 +1,7 @@
 $color-bg: #1e1e1e;
-$color-particle: rgba(226, 226, 226, 0.534);
-$spacing: 2000px;
-$time-1: 50s;
+$color-particle: rgba(235, 235, 235, 0.534);
+$spacing: 2100px;
+$time-1: 70s;
 $time-2: 100s;
 $time-3: 160s;
 
@@ -26,7 +26,7 @@ $time-3: 160s;
     top: 0;
     left: 0;
     width: 100%;
-    height: 55%;
+    height: 100%;
 }
 
 .page-bg {
@@ -73,6 +73,13 @@ $time-3: 160s;
     width: 3px;
 }
 
+.particle-3 {
+    animation: animParticle $time-3 linear infinite;
+    @include particles(300);
+    height: 3px;
+    width: 3px;
+}
+
 .particle-3:after {
     @include particles(300);
     height: 3px;
@@ -85,6 +92,6 @@ $time-3: 160s;
         transform: translateY(0px);
     }
     to {
-        transform: translateY($spacing * -1);
+        transform: translateY(2000px * -1);
     }
 }
