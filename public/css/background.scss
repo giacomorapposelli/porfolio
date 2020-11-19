@@ -49,39 +49,39 @@ $time-3: 160s;
 
 .particle-1 {
     animation: animParticle $time-1 linear infinite;
-    @include particles(300);
+    @include particles(200);
     height: 2px;
     width: 2px;
 }
 
 .particle-1:after {
-    @include particles(300);
+    @include particles(200);
     height: 2px;
     width: 2px;
 }
 
 .particle-2 {
     animation: animParticle $time-2 linear infinite;
-    @include particles(270);
+    @include particles(170);
     height: 2px;
     width: 2px;
 }
 
 .particle-2:after {
-    @include particles(180);
+    @include particles(170);
     height: 3px;
     width: 3px;
 }
 
 .particle-3 {
     animation: animParticle $time-3 linear infinite;
-    @include particles(300);
+    @include particles(150);
     height: 3px;
     width: 3px;
 }
 
 .particle-3:after {
-    @include particles(300);
+    @include particles(150);
     height: 3px;
     width: 3px;
     border-radius: 50%;
