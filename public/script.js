@@ -1,28 +1,28 @@
-const header = document.querySelector("header");
-const navLinks = document.querySelectorAll(".nav-bar li");
-const sections = document.querySelectorAll(".section");
-const modal = document.querySelector(".modals");
-const x = document.querySelector(".close-modal");
-const overlay = document.querySelector(".overlay");
-const cards = document.querySelectorAll(".card");
-const slider = document.querySelector(".modal-slider");
-const projects = document.querySelectorAll(".modal");
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
-const work = document.querySelectorAll(".work-content");
-const images = document.querySelectorAll(".card img");
+const header = document.querySelector('header');
+const navLinks = document.querySelectorAll('.nav-bar li');
+const sections = document.querySelectorAll('.section');
+const modal = document.querySelector('.modals');
+const videos = document.querySelectorAll('.modal-video');
+const x = document.querySelector('.close-modal');
+const overlay = document.querySelector('.overlay');
+const cards = document.querySelectorAll('.card');
+const slider = document.querySelector('.modal-slider');
+const projects = document.querySelectorAll('.modal');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const work = document.querySelectorAll('.work-content');
+const images = document.querySelectorAll('.card img');
 const size = projects[0].clientWidth;
-const inputs = document.getElementsByTagName("input");
-const text = document.querySelector("textarea");
-const button = document.querySelector("button");
-const message = document.querySelector(".confirm");
+const inputs = document.getElementsByTagName('input');
+const text = document.querySelector('textarea');
+const button = document.querySelector('button');
+const message = document.querySelector('.confirm');
 let counter = 0;
-const summary = document.querySelectorAll(".summary")[0].innerText
-
+const summary = document.querySelectorAll('.summary')[0].innerText;
 
 navLinks.forEach((link, index) => {
     link.addEventListener(
-        "click",
+        'click',
         function (index) {
             sections[index].scrollIntoView();
         }.bind(null, index)
@@ -30,116 +30,128 @@ navLinks.forEach((link, index) => {
 });
 
 const openModal = (id) => {
-    !id
-        ? (prevBtn.style.visibility = "hidden")
-        : (prevBtn.style.visibility = "visible");
-    id == projects.length - 1
-        ? (nextBtn.style.visibility = "hidden")
-        : (nextBtn.style.visibility = "visible");
-    modal.style.visibility = "visible";
-    overlay.style.visibility = "visible";
-    document.body.style.overflow = "hidden";
-    x.style.visibility = "visible";
     counter = id;
-    slider.style.transform = "translateX(" + -size * counter + "px)";
+    !id
+        ? (prevBtn.style.visibility = 'hidden')
+        : (prevBtn.style.visibility = 'visible');
+    id == projects.length - 1
+        ? (nextBtn.style.visibility = 'hidden')
+        : (nextBtn.style.visibility = 'visible');
+    modal.style.visibility = 'visible';
+    overlay.style.visibility = 'visible';
+    document.body.style.overflow = 'hidden';
+    x.style.visibility = 'visible';
+    counter = id;
+    slider.style.transform = 'translateX(' + -size * counter + 'px)';
+    videos[id].play();
 };
 
 const closeModal = () => {
-    nextBtn.style.visibility = "hidden";
-    prevBtn.style.visibility = "hidden";
-    modal.style.visibility = "hidden";
-    overlay.style.visibility = "hidden";
-    x.style.visibility = "hidden";
-    document.body.style.overflow = "";
+    nextBtn.style.visibility = 'hidden';
+    prevBtn.style.visibility = 'hidden';
+    modal.style.visibility = 'hidden';
+    overlay.style.visibility = 'hidden';
+    x.style.visibility = 'hidden';
+    document.body.style.overflow = '';
+    resetVideos();
+};
+
+const resetVideos = () => {
+    for (let video of videos) {
+        video.pause();
+        video.currentTime = 0;
+    }
 };
 
 cards.forEach((card, index) => {
     card.addEventListener(
-        "click",
+        'click',
         function (index) {
             openModal(index);
         }.bind(null, index)
     );
 });
 
-x.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
+x.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 
-nextBtn.addEventListener("click", () => {
-    prevBtn.style.visibility = "visible";
+nextBtn.addEventListener('click', () => {
+    prevBtn.style.visibility = 'visible';
     if (counter == projects.length - 1) {
         return;
     }
-    slider.style.transition = "transform 0.4s ease-in-out";
+    slider.style.transition = 'transform 0.4s ease-in-out';
     counter++;
-    slider.style.transform = "translateX(" + -size * counter + "px)";
+    slider.style.transform = 'translateX(' + -size * counter + 'px)';
+    resetVideos();
+    videos[counter].play();
 });
 
-prevBtn.addEventListener("click", () => {
-    nextBtn.style.visibility = "visible";
+prevBtn.addEventListener('click', () => {
+    nextBtn.style.visibility = 'visible';
     if (counter <= 0) {
         return;
     }
-    slider.style.transition = "transform 0.4s ease-in-out";
+    slider.style.transition = 'transform 0.4s ease-in-out';
     counter--;
-    slider.style.transform = "translateX(" + -size * counter + "px)";
+    slider.style.transform = 'translateX(' + -size * counter + 'px)';
+    resetVideos();
+    videos[counter].play();
 });
 
-slider.addEventListener("transitionend", () => {
-    if (projects[counter].id === "project-5-modal") {
-        nextBtn.style.visibility = "hidden";
+slider.addEventListener('transitionend', () => {
+    if (projects[counter].id === 'project-5-modal') {
+        nextBtn.style.visibility = 'hidden';
     }
 
-    if (projects[counter].id === "project-0-modal") {
-        prevBtn.style.visibility = "hidden";
+    if (projects[counter].id === 'project-0-modal') {
+        prevBtn.style.visibility = 'hidden';
     }
 });
 
 const navSlide = () => {
-    const hamburger = document.querySelector(".hamburger");
-    const navbar = document.querySelector(".nav-bar");
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.nav-bar');
     hamburger.onclick = () => {
-        navbar.classList.toggle("nav-active");
+        navbar.classList.toggle('nav-active');
         navLinks.forEach((link, index) => {
             link.style.animation
-                ? (link.style.animation = "")
+                ? (link.style.animation = '')
                 : (link.style.animation = `navLinkFade 0.5s ease forwards ${
                       index / 7 + 1
                   }s`);
         });
-        hamburger.classList.toggle("toggle");
+        hamburger.classList.toggle('toggle');
     };
 };
 
-button.addEventListener("click", () => {
+button.addEventListener('click', () => {
     for (let input of inputs) {
-        if (input.value != "" && text.value != "") {
-            message.style.visibility = "visible";
-            setTimeout(() => (message.style.visibility = "hidden"), 4000);
+        if (input.value != '' && text.value != '') {
+            message.style.visibility = 'visible';
+            setTimeout(() => (message.style.visibility = 'hidden'), 4000);
         }
         setTimeout(() => {
-            input.value = "";
-            text.value = "";
+            input.value = '';
+            text.value = '';
         }, 100);
     }
 });
 
 const sr = ScrollReveal({
-    origin: "top",
-    distance: "100px",
+    origin: 'top',
+    distance: '100px',
     duration: 1800,
-    reset: true,
+    reset: true
 });
 
-
-
-sr.reveal(".card", { interval: 400 });
-sr.reveal(".name", {});
-sr.reveal(".mainbar", { delay: 600 });
-sr.reveal(".mainlogo", { delay: 1000,interval: 400 });
-sr.reveal(".portfolio", { interval: 400, delay: 200 });
-sr.reveal(".contact__input", { interval: 200 });
-sr.reveal(".button", { delay: 200 });
+sr.reveal('.card', { interval: 400 });
+sr.reveal('.name', {});
+sr.reveal('.mainbar', { delay: 600 });
+sr.reveal('.mainlogo', { delay: 1000, interval: 400 });
+sr.reveal('.portfolio', { interval: 400, delay: 200 });
+sr.reveal('.contact__input', { interval: 200 });
+sr.reveal('.button', { delay: 200 });
 
 window.onload = () => navSlide();
 
@@ -170,16 +182,14 @@ const checkScrollSpeed = (function (settings) {
     };
 })();
 
-window.addEventListener("scroll", function () {
+window.addEventListener('scroll', function () {
     let speed = checkScrollSpeed();
     if (speed > 60) {
-        sr.reveal(".card", { interval: 0 }, { duration: 0 });
-        sr.reveal(".portfolio", { delay: 0 }, { duration: 0 });
-        sr.reveal(".mainbar", { delay: 0 }, { duration: 0 });
-        sr.reveal(".mainlogo", { interval: 0 }, { duration: 0 });
-        sr.reveal(".contact__input", { interval: 0 }, { duration: 0 });
-        sr.reveal(".button", { interval: 0 }, { duration: 0 });
+        sr.reveal('.card', { interval: 0 }, { duration: 0 });
+        sr.reveal('.portfolio', { delay: 0 }, { duration: 0 });
+        sr.reveal('.mainbar', { delay: 0 }, { duration: 0 });
+        sr.reveal('.mainlogo', { interval: 0 }, { duration: 0 });
+        sr.reveal('.contact__input', { interval: 0 }, { duration: 0 });
+        sr.reveal('.button', { interval: 0 }, { duration: 0 });
     }
 });
-
-
