@@ -278,6 +278,7 @@ h2 {
 .card:hover {
     box-shadow: 0 0 1.5rem rgba(128, 128, 128, 0.616);
     background: var(--main-decor-color);
+    transform: scale(1.5);
 }
 
 /*──────────────────
