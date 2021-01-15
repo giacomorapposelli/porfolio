@@ -147,11 +147,11 @@ const sr = ScrollReveal({
 
 sr.reveal('.card', { interval: 400 });
 sr.reveal('.name', {});
-sr.reveal('.mainbar', { delay: 600 });
-sr.reveal('.mainlogo', { delay: 1000, interval: 400 });
+sr.reveal('.mainbar', { delay: 800 });
+sr.reveal('.mainlogo', { delay: 1600, interval: 400 });
 sr.reveal('.portfolio', { interval: 400, delay: 200 });
-sr.reveal('.contact__input', { interval: 200 });
-sr.reveal('.button', { delay: 200 });
+sr.reveal('.contact__input', { interval: 400 });
+sr.reveal('.button', { delay: 1800 });
 
 window.onload = () => navSlide();
 
