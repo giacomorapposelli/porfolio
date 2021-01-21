@@ -624,6 +624,17 @@ hr {
     .summary {
         font-size: 0.8rem;
     }
+    .hamburger {
+        position: absolute;
+        top: 17px;
+        right: 5%;
+        display: block;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .nav-bar li {
+        opacity: 0;
+    }
 }
 
 @media only screen and (min-width: 1680px) {
@@ -632,7 +643,7 @@ hr {
     }
 
     .about {
-        height: 30vh;
+        min-height: 30vh;
     }
 
     .work-box {
@@ -703,17 +714,6 @@ hr {
         transform: translatex(100%);
         transition: transform 0.5s ease-in;
         z-index: 3;
-    }
-    .hamburger {
-        position: absolute;
-        top: 17px;
-        right: 8%;
-        display: block;
-        cursor: pointer;
-        z-index: 5;
-    }
-    .nav-bar li {
-        opacity: 0;
     }
 
     hr {
