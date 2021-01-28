@@ -82,7 +82,6 @@ cards.forEach((card, index) => {
 });
 
 x.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
 
 nextBtn.addEventListener('click', () => {
     prevBtn.style.visibility = 'visible';
