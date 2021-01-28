@@ -1,13 +1,17 @@
 const header = document.querySelector('header');
 const navLinks = document.querySelectorAll('.nav-bar li');
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.nav-bar');
 const sections = document.querySelectorAll('.section');
 const modal = document.querySelector('.modals');
 const videos = document.querySelectorAll('.modal-video');
 const x = document.querySelector('.close-modal');
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector('.bg');
 const cards = document.querySelectorAll('.card');
+const cardImg = document.querySelectorAll('.card img');
 const slider = document.querySelector('.modal-slider');
 const projects = document.querySelectorAll('.modal');
+const workContent = document.querySelectorAll('.work-content');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const work = document.querySelectorAll('.work-content');
@@ -17,8 +21,9 @@ const inputs = document.getElementsByTagName('input');
 const text = document.querySelector('textarea');
 const button = document.querySelector('button');
 const message = document.querySelector('.confirm');
-let counter = 0;
 const summary = document.querySelectorAll('.summary')[0].innerText;
+let counter = 0;
+let isModalOpen = false;
 
 navLinks.forEach((link, index) => {
     link.addEventListener(
@@ -31,6 +36,7 @@ navLinks.forEach((link, index) => {
 
 const openModal = (id) => {
     counter = id;
+    isModalOpen = true;
     !id
         ? (prevBtn.style.visibility = 'hidden')
         : (prevBtn.style.visibility = 'visible');
@@ -38,19 +44,22 @@ const openModal = (id) => {
         ? (nextBtn.style.visibility = 'hidden')
         : (nextBtn.style.visibility = 'visible');
     modal.style.visibility = 'visible';
-    overlay.style.visibility = 'visible';
+    overlay.classList.add('overlay');
     document.body.style.overflow = 'hidden';
     x.style.visibility = 'visible';
     counter = id;
     slider.style.transform = 'translateX(' + -size * counter + 'px)';
     videos[id].play();
+    hamburger.style.visibility = 'hidden';
 };
 
 const closeModal = () => {
+    isModalOpen = false;
     nextBtn.style.visibility = 'hidden';
     prevBtn.style.visibility = 'hidden';
     modal.style.visibility = 'hidden';
-    overlay.style.visibility = 'hidden';
+    hamburger.style.visibility = 'visible';
+    overlay.classList.remove('overlay');
     x.style.visibility = 'hidden';
     document.body.style.overflow = '';
     resetVideos();
@@ -110,20 +119,23 @@ slider.addEventListener('transitionend', () => {
 });
 
 const navSlide = () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navbar = document.querySelector('.nav-bar');
-    hamburger.onclick = () => {
-        navbar.classList.toggle('nav-active');
-        navLinks.forEach((link, index) => {
-            link.style.animation
-                ? (link.style.animation = '')
-                : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-                      index / 7 + 1
-                  }s`);
-        });
-        hamburger.classList.toggle('toggle');
-    };
+    if (!isModalOpen) {
+        hamburger.onclick = () => {
+            overlay.classList.toggle('overlay');
+            navbar.classList.toggle('nav-active');
+            navLinks.forEach((link, index) => {
+                link.style.animation
+                    ? (link.style.animation = '')
+                    : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+                          index / 7 + 1
+                      }s`);
+            });
+            hamburger.classList.toggle('toggle');
+        };
+    }
 };
+
+window.onload = () => navSlide();
 
 button.addEventListener('click', () => {
     for (let input of inputs) {
@@ -152,8 +164,6 @@ sr.reveal('.mainlogo', { delay: 1600, interval: 400 });
 sr.reveal('.portfolio', { interval: 400, delay: 200 });
 sr.reveal('.contact__input', { interval: 400 });
 sr.reveal('.button', { delay: 1800 });
-
-window.onload = () => navSlide();
 
 const checkScrollSpeed = (function (settings) {
     settings = settings || {};

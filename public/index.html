@@ -31,20 +31,14 @@
         <script defer src="script.js"></script>
     </head>
     <body>
-        <div class="overlay"></div>
-        <div class="close-modal"><i class="far fa-times-circle"></i></div>
+        <div class="bg"></div>
+
         <div class="container">
             <header>
-                <a class="logo" href="#home"> </a>
                 <nav>
                     <ul class="nav-bar">
-                        <div class="bg"></div>
-                        <li>
-                            <a class="nav-link">About Me</a>
-                        </li>
-                        <li>
-                            <a class="nav-link">Projects</a>
-                        </li>
+                        <li><a class="nav-link">About Me</a></li>
+                        <li><a class="nav-link">Projects</a></li>
                         <li><a class="nav-link">Contact</a></li>
                     </ul>
                     <div class="hamburger">
@@ -109,55 +103,62 @@
                         Projects
                         <hr />
                     </h2>
-                    <div class="work-box">
-                        <div class="work">
-                            <div class="card" id="card1">
+                    <div class="work">
+                        <div class="card" id="card1">
+                            <div class="img-frame">
                                 <img class="work-img" src="/images/logo.jpg" />
-                                <div class="work-content">
-                                    SpeedKobra Official Website
-                                </div>
                             </div>
-                            <div class="card" id="card2">
+                            <div class="work-content">
+                                SpeedKobra Official Website
+                            </div>
+                        </div>
+                        <div class="card" id="card2">
+                            <div class="img-frame">
                                 <img
                                     class="work-img"
                                     src="/images/palmbook.png"
                                 />
-
-                                <div class="work-content">Palmbook</div>
                             </div>
-                            <div class="card" id="card3">
+                            <div class="work-content">Palmbook</div>
+                        </div>
+                        <div class="card" id="card3">
+                            <div class="img-frame">
                                 <img
                                     class="work-img"
                                     src="/images/painted.png"
                                 />
-                                <div class="work-content">Painted Ubahn</div>
                             </div>
-                            <div class="card" id="card4">
+                            <div class="work-content">Painted Ubahn</div>
+                        </div>
+                        <div class="card" id="card4">
+                            <div class="img-frame">
                                 <img
                                     class="work-img"
                                     src="/images/petition.png"
                                 />
-
-                                <div class="work-content">Petition</div>
                             </div>
-                            <div class="card" id="card5">
+
+                            <div class="work-content">Petition</div>
+                        </div>
+                        <div class="card" id="card5">
+                            <div class="img-frame">
                                 <img
                                     class="work-img"
                                     src="/images/forza4.png"
                                 />
-
-                                <div class="work-content">
-                                    Connect Four Game
-                                </div>
                             </div>
-                            <div class="card" id="card6">
+
+                            <div class="work-content">Connect Four Game</div>
+                        </div>
+                        <div class="card" id="card6">
+                            <div class="img-frame">
                                 <img
                                     class="work-img"
                                     src="/images/spotify.png"
                                 />
-
-                                <div class="work-content">Spotify API</div>
                             </div>
+
+                            <div class="work-content">Spotify API</div>
                         </div>
                     </div>
                 </div>
@@ -214,8 +215,10 @@
                     </div>
                 </div>
             </main>
-
             <div class="modals">
+                <div class="close-modal">
+                    <i class="far fa-times-circle"></i>
+                </div>
                 <i class="fas fa-angle-left prev-btn"></i>
                 <i class="fas fa-angle-right next-btn"></i>
                 <div class="modal-slider">
@@ -365,9 +368,7 @@
                             <span class="tag">javascript</span>
                             <span class="tag">node</span>
                             <span class="tag">express</span>
-                            <!-- <span class="tag">handlebars</span> -->
                             <span class="tag">psql</span>
-                            <!-- <span class="tag">css</span> -->
                         </div>
                         <hr class="modal-br" />
                         <ul class="modal-nav">
