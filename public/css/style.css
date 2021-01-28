@@ -610,6 +610,10 @@ hr {
     }
 }
 @media only screen and (max-width: 960px) {
+    body {
+        overflow: scroll;
+    }
+
     h1,
     h2 {
         font-size: 3rem;
