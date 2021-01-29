@@ -206,9 +206,7 @@ h2 {
     text-align: center;
     color: var(--main-fonts-color);
 }
-#projects h3 {
-    padding-top: 70px;
-}
+
 #projects p {
     font-family: var(--main-font-family);
     font-size: 1.2rem;
@@ -294,7 +292,8 @@ h2 {
       Contact
 ──────────────────*/
 
-#contact {
+#contact,
+#projects {
     position: relative;
     margin-top: 50px;
     min-height: 100vh;
@@ -485,6 +484,7 @@ hr {
 .modal {
     min-width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
