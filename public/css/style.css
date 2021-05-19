@@ -8,13 +8,16 @@
     --main-font-family: 'Poppins', sans-serif;
 }
 body {
+    box-sizing: border-box;
     overflow: hidden;
 }
+
 * {
     margin: 0;
-    padding: 0;
+}
+
+html {
     scroll-behavior: smooth;
-    box-sizing: border-box;
 }
 
 main {
@@ -197,7 +200,6 @@ h2 {
 ──────────────────*/
 
 #projects {
-    margin-top: 50px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -214,17 +216,16 @@ h2 {
 }
 
 .work {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 240px); /* 3 columns */
+    grid-gap: 25px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin-left: 20px;
     width: 200px;
     height: 250px;
     border-radius: 5px;
@@ -295,7 +296,6 @@ h2 {
 #contact,
 #projects {
     position: relative;
-    margin-top: 50px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -328,7 +328,7 @@ h2 {
 
 .contact__input {
     width: 30%;
-    padding: 1rem;
+    padding: 10px;
     border-radius: 0.5rem;
     border: 3px solid #47bae03f;
     background: transparent;
@@ -421,10 +421,6 @@ hr {
 /*────────────────── 
      Scrollbar
 ──────────────────*/
-::-webkit-scrollbar {
-    width: 5px;
-    background: rgba(5, 5, 5, 1);
-}
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: #47bae03f;
@@ -598,21 +594,7 @@ hr {
     media queries
 ──────────────────*/
 
-@media only screen and (max-width: 1484px) and (min-width: 1214px) {
-    .work {
-        padding: 20px 20%;
-    }
-}
-@media only screen and (max-width: 1214px) and (min-width: 1000px) {
-    .work {
-        padding: 20px 12%;
-    }
-}
-@media only screen and (max-width: 960px) {
-    body {
-        overflow: scroll;
-    }
-
+@media only screen and (max-width: 1080px) {
     h1,
     h2 {
         font-size: 3rem;
@@ -675,8 +657,7 @@ hr {
         top: 2%;
     }
     .contact__input {
-        width: 50%;
-        padding: 10px;
+        width: 35%;
     }
     .tag {
         font-size: 12px;
@@ -700,11 +681,19 @@ hr {
         justify-content: center;
         align-items: center;
     }
+}
+
+@media only screen and (max-width: 760px) {
+    body {
+        overflow: scroll;
+    }
 
     .work {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        margin-top: 40px;
+        grid-template-columns: repeat(2, 240px); /* 3 columns */
+    }
+
+    .contact__input {
+        width: 40%;
     }
 }
 
@@ -789,6 +778,16 @@ hr {
     }
     .msg {
         width: 100px;
+    }
+
+    .work {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .card {
+        margin: 0;
     }
 }
 

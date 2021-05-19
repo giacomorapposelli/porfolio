@@ -157,12 +157,12 @@ const sr = ScrollReveal({
 });
 
 sr.reveal('.card', { interval: 400 });
-sr.reveal('.name', {});
+sr.reveal('.name', { interval: 1 });
 sr.reveal('.mainbar', { delay: 800 });
 sr.reveal('.mainlogo', { delay: 1600, interval: 400 });
 sr.reveal('.portfolio', { interval: 400, delay: 200 });
 sr.reveal('.contact__input', { interval: 400 });
-sr.reveal('.button', { delay: 1800 });
+sr.reveal('.button', { delay: 1600 });
 
 const checkScrollSpeed = (function (settings) {
     settings = settings || {};
